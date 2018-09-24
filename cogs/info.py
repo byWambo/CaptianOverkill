@@ -68,7 +68,6 @@ class Info:
                         PREFIX + 'report {user mention} - meldet einen User. 3 Reports = mute! \n' +
                         PREFIX + 'server - Command für den Server. \n' +
                         PREFIX + 'user - Command für User. \n' +
-                        PREFIX + 'pokewatch - Noch nicht fertig. Wird ein Discordspiel. \n' +
                         PREFIX + 'urbdict {Suche} - Suche was im Urban-Dictonary. \n' +
                         PREFIX + 'wakeup {User} - Stupse jemanden an! \n' +
                         PREFIX + 'post {Post} - Lasse es andere liken! \n' +
