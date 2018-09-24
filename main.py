@@ -8,15 +8,15 @@ import io
 import os, os.path, sys
 import safygiphy
 import logging
+import secrets
 
 logging.basicConfig(level=logging.INFO)
 
 client = discord.Client()
 
-TOKEN = 'YOUR_TOKEN_HERE'
-MyID = 123456789098765432
-# Your ID there ^ : https://support.discordapp.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-
-PREFIX = "YOUR_PREFIX_HERE"
+TOKEN = secrets.TOKEN
+MyID = secrets.MyID
+PREFIX = secrets.PREFIX
 
 g = safygiphy.Giphy()
 times = time.time()
