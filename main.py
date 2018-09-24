@@ -20,7 +20,6 @@ cogs = [
     'cogs.info',
     'cogs.bot',
     'cogs.moderation',
-    'cogs.pokewatch',
     'cogs.instacord'
 ]
 
