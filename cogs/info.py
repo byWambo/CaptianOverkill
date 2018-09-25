@@ -74,6 +74,7 @@ class Info:
                         PREFIX + 'posts - Schaue dir andere Posts an! \n' +
                         PREFIX + 'count {Anfang} {Ende} - Zu dumm zum zählen? \n' +
                         PREFIX + 'source {Command} - Schau in mich hinein. \n' +
+                        PREFIX + 'say {tell} - Lass mich was sagen. \n' +
                         PREFIX + 'help - Dieser Command. \n \n'
                                  'Außerdem gibt es eine Join- und Leave-Message.'
         )
@@ -94,6 +95,8 @@ class Info:
         cogys = ['user', 'server', 'help', 'post', 'posts', 'uptime', 'report', 'sleep', 'coinflip', 'gif', 'urbdict', 'wakeup', 'count']
         if ree in cogys:
             await ctx.send('<a:youskid:493458639399419914>')
+        elif ree == 'github':
+            await ctx.send('Bitte nicht skidden: https://github.com/G3bE/CaptianOverkill/tree/commands-ext')
         else:
             await ctx.send('Für deine Eingabe "' + ree + '" gibt es leider keinen Eintrag!')
 
