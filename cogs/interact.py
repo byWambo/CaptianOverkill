@@ -3,7 +3,9 @@ from discord.ext import commands
 import asyncio
 import logging
 import random
-import requests, io, safygiphy
+import requests
+import io
+import safygiphy
 
 
 class Interact:
@@ -84,6 +86,17 @@ class Interact:
             else:
                 await ctx.send('Soweit kann ich noch nicht zählen!')
 
+    @commands.command()
+    async def say(self, ctx, *, tell: str):
+        if self.check_tell(tell=tell) is False:
+            await ctx.send("You won't do that, won't you?")
+        else:
+            tellEmbed = discord.Embed(
+                title=ctx.author.name + ' zwingt mich das zu sagen.',
+                description=tell
+            )
+            await ctx.send(embed=tellEmbed)
+
     # Error handling
     @sleep.error
     async def sleep_error(self, ctx, error):
@@ -110,6 +123,30 @@ class Interact:
     async def count_error(self, ctx, error):
         if isinstance(error, commands.MissingRequiredArgument):
             await ctx.send('Benutzung: >count <Anfang> <Ende> - Beispiel >count 4 10')
+
+    def check_tell(self, tell: str):
+        if tell.startswith('.'):
+            return False
+        elif tell.startswith('!'):
+            return False
+        elif tell.startswith('>'):
+            return False
+        elif tell.startswith('-'):
+            return False
+        elif tell.startswith('oc.'):
+            return False
+        elif tell.startswith('sudo'):
+            return False
+        elif tell.startswith('pls'):
+            return False
+        elif tell.startswith('dev.'):
+            return False
+        elif tell.startswith('p.'):
+            return False
+        elif tell.startswith('g-'):
+            return False
+        else:
+            return True
 
 
 def setup(bot: commands.bot):

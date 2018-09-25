@@ -17,8 +17,8 @@ class Bot:
             game = ctx.message.content[6:]
             await self.bot.change_presence(activity=discord.Game(name=game))
 
-    @commands.command(name="load")
-    async def _load(self, ctx, *, cog: str):
+    @commands.command()
+    async def load(self, ctx, *, cog: str):
         if ctx.author.id == self.bot.G3eID:
             if cog != "all":
                 try:
