@@ -10,7 +10,8 @@ import safygiphy
 import logging
 import secrets
 
-logging.basicConfig(level=logging.INFO)
+fmt = '[%(levelname)s] %(asctime)s - %(name)s:%(lineno)d - %(message)s'
+logging.basicConfig(format=fmt, level=logging.INFO)
 
 client = discord.Client()
 
